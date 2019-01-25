@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
-    <script src="https://unpkg.com/quicklink@1.0.0/dist/quicklink.umd.js"></script>
 </head>
+
 <body>
     <div class="h-c-header__initiative-logo h-c-header__initiative-logo--no-margin">
-                <a href="2.html"
-                    data-analytics='{
+        <a href="2.html" data-analytics='{
                                 "category": "navigation",
                                 "action": "header",
                                 "label": "navlink: home"
                                 }'
-                    class="h-c-header__initiative-logo-link uni-click-tracker">
-                  <span class="h-c-header__initiative-logo-text"> The Keyword</span>
-                </a>
+            class="h-c-header__initiative-logo-link uni-click-tracker">
+            <span class="h-c-header__initiative-logo-text"> The Keyword</span>
+        </a>
     </div>
     <a href="static/js/login.js"></a>
     <div id="landing-components" data-scripts='[
@@ -35,31 +35,35 @@
             }
           }
         ]'></div>
-          
-   <div id="userlogin"></div>
-   <input type="button" value="click load" onclick="load()" />
-   <iframe id="myhtml">
-       default content
-   </iframe>
-   <script type="text/javascript">
-    var scripts = document.querySelector("#landing-components").getAttribute('data-scripts');
-    scripts = JSON.parse(scripts);
-    scripts.forEach(function(scriptObj) {
-      var s = document.createElement('script');
-      s.async = scriptObj.options.async;
-      s.defer = scriptObj.options.defer;
-      s.src = scriptObj.url;
-      document.head.appendChild(s);
-    });
-</script>
+
+    <div id="userlogin"></div>
+    <input type="button" value="click load" onclick="load()" />
+    <iframe id="myhtml">
+        default content
+    </iframe>
+    <script type="text/javascript">
+        var scripts = document.querySelector("#landing-components").getAttribute('data-scripts');
+        scripts = JSON.parse(scripts);
+        scripts.forEach(function (scriptObj) {
+            var s = document.createElement('script');
+            s.async = scriptObj.options.async;
+            s.defer = scriptObj.options.defer;
+            s.src = scriptObj.url;
+            document.head.appendChild(s);
+        });
+    </script>
+    <script src="https://unpkg.com/quicklink@1.0.0/dist/quicklink.umd.js"></script>
+
     <script>
-        window.addEventListener('load', function(){
+        window.addEventListener('load', function () {
             quicklink({});
         });
-        function load(){
-          var content = document.getElementById("myhtml")
-          content.src="2.html"
+
+        function load() {
+            var content = document.getElementById("myhtml")
+            content.src = "2.html"
         }
-        </script>
+    </script>
 </body>
+
 </html>
