@@ -1,0 +1,9 @@
+{
+  "name": "quicklink-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "live":"live-server"
+  }
+}
